@@ -9,8 +9,8 @@ bookLink = "40545956"
 #will have user input link, later on will make search function that automatically gets link 
 
 
-response = requests.get(url + urlpage + bookLink, timeout=5)  
-contentbook = BeautifulSoup(response.content, "html.parser")
+responsebook = requests.get(url + urlpage + bookLink, timeout=5)  
+contentbook = BeautifulSoup(responsebook.content, "html.parser")
 #saves the entire html from the website into content variable
 
 #later on will do multiple books, saved and include input if this book (title, author, stars) is the one.

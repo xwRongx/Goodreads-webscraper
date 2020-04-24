@@ -9,8 +9,8 @@ searchTerm = input("What book do you want to search for?")
 #asks user to enter a book name
 
 url = 'https://www.goodreads.com' + '/search?q=' + searchTerm
-response = requests.get(url, timeout=5)  
-contentsearch = BeautifulSoup(response.content, "html.parser")
+responsesearch = requests.get(url, timeout=5)  
+contentsearch = BeautifulSoup(responsesearch.content, "html.parser")
 #setup: url is the url searchbar takes you to
 
 entryLink = []

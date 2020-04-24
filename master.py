@@ -28,8 +28,8 @@ def searchScrape():
     urlsearchTerm = input("What book do you want to search for?")
     #asks user to enter a book name
 
-    response = requests.get(url + urlsearch + urlsearchTerm, timeout=5)  
-    contentsearch = BeautifulSoup(response.content, "html.parser")
+    responsesearch = requests.get(url + urlsearch + urlsearchTerm, timeout=5)  
+    contentsearch = BeautifulSoup(responsesearch.content, "html.parser")
     #setup: url is the url searchbar takes you to
     #concatenates goodreads url, search url, and specific book name url 
     # can directly add book name to search term because search url contains it

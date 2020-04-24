@@ -8,8 +8,8 @@ urlauthor = "2778055"
 
 #will have user input an author's name, their basic information will show up
 url = 'https://www.goodreads.com'
-response = requests.get(url + urlpage + urlauthor, timeout=5)  
-contentauthor = BeautifulSoup(response.content, "html.parser")
+responseauthor = requests.get(url + urlpage + urlauthor, timeout=5)  
+contentauthor = BeautifulSoup(responseauthor.content, "html.parser")
 #saves the entire html from the website into content variable
 
 #later on will find for different authors, saved and include input if this author is the one.
