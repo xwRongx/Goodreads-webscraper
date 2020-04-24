@@ -3,11 +3,14 @@ import requests
 import json
 #imports libraries needed
 
-bookLink = "40545956-where-the-forest-meets-the-stars"
+url = 'https://www.goodreads.com'
+urlpage = '/book/show/'
+bookLink = "40545956"
 #will have user input link, later on will make search function that automatically gets link 
-url = 'https://www.goodreads.com/book/show/' + bookLink
-response = requests.get(url, timeout=5)  
-content = BeautifulSoup(response.content, "html.parser")
+
+
+response = requests.get(url + urlpage + bookLink, timeout=5)  
+contentbook = BeautifulSoup(response.content, "html.parser")
 #saves the entire html from the website into content variable
 
 #later on will do multiple books, saved and include input if this book (title, author, stars) is the one.

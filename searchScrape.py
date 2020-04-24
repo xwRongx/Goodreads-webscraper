@@ -4,12 +4,13 @@ import json
 import re
 #imports libraries
 
+
 searchTerm = input("What book do you want to search for?")
 #asks user to enter a book name
 
-url = 'https://www.goodreads.com/search?q=' + searchTerm
+url = 'https://www.goodreads.com' + '/search?q=' + searchTerm
 response = requests.get(url, timeout=5)  
-content = BeautifulSoup(response.content, "html.parser")
+contentsearch = BeautifulSoup(response.content, "html.parser")
 #setup: url is the url searchbar takes you to
 
 entryLink = []
@@ -50,4 +51,4 @@ elif whichLink == 5:
     print(THElink)
 else:
     print("Enter a number between 1 and 5")
-
+#asks user which result is the one they are looking for then prints it
