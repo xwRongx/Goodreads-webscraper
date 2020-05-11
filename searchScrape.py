@@ -14,22 +14,23 @@ content = BeautifulSoup(response.content, "html.parser")
 
 entryLink = []
 
-for link in content.findAll('a', attrs={"class": "bookTitle"}, limit=5):
+for link in contentsearch.findAll('a', attrs={"class": "bookTitle"}, limit=5):
     entryLink.append('www.goodreads.com' + link.get('href'))
 #takes the first 5 links on the page with the class bookTitle
 #adds the goodreads url to the link path and appends it to the entryLink list 
 
 linkArr = []
 
-for tr in content.findall('li', attrs={"class": "book"}, limit=5):
+for tr in contentsearch.findAll('tr', attrs={"itemscope itemtype": "http://schema.org/Book"}, limit=5):
     linkObject = {
-        "title": content.find("span", attrs={"role": "heading"}).text,
-        "author": content.find("span", attrs={"itemprop":"author"}).text,
+        "title": contentsearch.find("span", attrs={"role": "heading"}).text,
+        "author": contentsearch.find("span", attrs={"itemprop":"name"}).text
     }
     linkArr.append(linkObject)
 #takes the title and author of the first 5 search results and adds it to the linkArr array
 
 print(linkArr)
+print(entryLink)
 
 whichLink = int(input("Which book do you want? 1/2/3/4/5  "))
 

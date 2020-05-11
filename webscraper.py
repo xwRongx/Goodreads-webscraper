@@ -16,12 +16,12 @@ content = BeautifulSoup(response.content, "html.parser")
 #finds the text for the title, author, stars, etc. from content variable
 #saves text from tag as a value in a dictionary
 bookObject = {
-    "title": content.find("h1", attrs={"id": "bookTitle"}).text,
-    "author": content.find("span", attrs={"itemprop":"name"}).text,
-    "stars": content.find("span", attrs={"itemprop":"ratingValue"}).text,
-    "ratings": content.find("meta", attrs={"itemprop":"ratingCount"}).text,
-    "reviews": content.find("meta", attrs={"itemprop":"reviewCount"}).text,
-    "summary": content.find("div", attrs={"id":"description"}).text
+    "title": contentbook.find("h1", attrs={"id": "bookTitle"}).text,
+    "author": contentbook.find("span", attrs={"itemprop":"name"}).text,
+    "stars": contentbook.find("span", attrs={"itemprop":"ratingValue"}).text,
+    "ratings": contentbook.find("meta", attrs={"itemprop":"ratingCount"}).text,
+    "reviews": contentbook.find("meta", attrs={"itemprop":"reviewCount"}).text,
+    "summary": contentbook.find("div", attrs={"id":"description"}).text
 }
 #format- category: scraped information from html but without the tags
 

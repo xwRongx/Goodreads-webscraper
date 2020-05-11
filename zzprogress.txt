@@ -1,0 +1,14 @@
+5/11/20: 
+    bookScrape: Complete, only used for ref
+    linkScrape: Complete, only used for ref
+    authorBio + authorWorks: Complete
+    searchScrape: debugging
+    bestScrape: Complete (for CREATE purposes, debugging specific genre option)
+    master: 2/3
+    
+    nomineeScrape: dropped
+    genreSearch: dropped
+    quoteGenerator: dropped
+
+
+    
