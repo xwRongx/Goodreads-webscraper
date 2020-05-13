@@ -2,7 +2,7 @@
     bookScrape: Complete, only used for ref
     linkScrape: Complete, only used for ref
     authorBio + authorWorks: Complete
-    searchScrape: debugging
+    searchScrape: debugging, nonessential
     bestScrape: Complete (for CREATE purposes, debugging specific genre option)
     master: 2/3
     
